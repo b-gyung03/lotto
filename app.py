@@ -1,12 +1,12 @@
 import streamlit as st
 from lotto_utils import *
 
-st.title('·Î¶Ç ¹øÈ£ »ı¼º±â')
-n = st.number_input('¸î °ÔÀÓ ÇÒ±î¿ä?', min_value = 1, max_value = 10, value = 5)
+st.title('ë¡œë˜ ë²ˆí˜¸ ìƒì„±ê¸°')
+n = st.number_input('ëª‡ ê²Œì„ í• ê¹Œìš”?', min_value = 1, max_value = 10, value = 5)
 
-if st.button('¹øÈ£ »Ì±â') :
+if st.button('ë²ˆí˜¸ ë½‘ê¸°') :
     games = make_games(n)
     lines = []
     for i in range(n) :
-        lines.write(f'**{i+ 1}°ÔÀÓ** : {to_text(games[i])}')
+        lines.write(f'**{i+ 1}ê²Œì„** : {to_text(games[i])}')
     st.code('\n'.join(lines), language = None)
